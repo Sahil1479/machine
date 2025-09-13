@@ -1,0 +1,30 @@
+Entities:
+- Users
+    Authentication required
+    Maintains their own financial data
+    Auth with JWT
+- Transactions
+    Users can add transactions with
+        Date
+        Type => (Income/Expense)
+        Category => (Salary, Rent, Food, Investments, etc)
+        Amount
+        Description (optional)
+    Transaction should be editable & deletable
+
+Dashboard
+    Shows:
+        Total Income
+        Total Expenses
+        Net profit (Income - Expenses)
+        Category wise breakdown (Pie chart)
+        Monthly trends (Line chart)
+
+Advance features
+- Pagination (for transaction list)
+- Query optimization => use select_related (1-1) and prefetch_related (M-M)
+- Caching
+- Rate limiting
+- Async => heavy calculation sync_to_async
+- Validation
+- File uploads (Optional)
